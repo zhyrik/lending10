@@ -1,0 +1,11 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+
+@include font-face("aleo", "../fonts/Aleo/Aleo-Bold", bold);
+@include font-face("aleo", "../fonts/Aleo/Aleo-Regular");
+@include font-face("aleo", "../fonts/Aleo/Aleo-BoldItalic", bold, italic);
+@include font-face("aleo", "../fonts/Aleo/Aleo-Italic", 400, italic);
+@include font-face("aleo", "../fonts/Aleo/Aleo-Light", 200);
+@include font-face("aleo", "../fonts/Aleo/Aleo-LightItalic", 200, italic);
