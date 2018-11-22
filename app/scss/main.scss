@@ -3,49 +3,100 @@
 @import "libs";
 
 ::placeholder {
-	color: #666;
+  color: #666;
 }
 
 ::selection {
-	background-color: $accent;
-	color: #fff;
+  background-color: $accent;
+  color: #fff;
 }
-
+html{
+  font-size: 20px;
+}
 body {
-	font-size: 18px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
-	font-family: $default-font;
-	overflow-x: hidden;
-	color: $text;
-	input, textarea {
-		border: #666 1px solid;
-		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
-	}
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: $default-font;
+  overflow-x: hidden;
+  color: $text;
 }
 
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	&.img-width {
-		width: 100%;
-	}
+a{
+  color: black;
+  cursor: pointer;
+  transition: .3 all;
+  &:hover{
+    text-decoration: none;
+    color: black;
+  }
 }
-
-.text-center {
-	text-align: center;
+.header{
+  position: relative;
 }
-
-b, strong {
-	font-weight: bold;
+.menu{
+  text-align: center;
+  height: 5rem;
+  font-size: 14px;
+  a:hover{
+    color: #F34949;
+  }
+}
+.hamburger{
+  display: none;
+  height: 2px;
+  width: 20px;
+  background: #000;
+  &:after, &::before{
+    height: 2px;
+    width: 20px;
+    background: #000;
+  }
+}
+.fon{
+  background-image: url("../img/Fon.jpg.png");
+  background-size: cover;
+  min-height: 80vh;
+  border-bottom: 2px solid #F34949;
+  color: white;
+  text-align: center;
+}
+.fon-height{
+  min-height: 80vh;
+  h3{
+    margin: 0 1.2rem;
+    font-size: 16px;
+  }
+}
+h1{
+  font-size: 5rem;
+  font-family: "wc-mano-negro";
+  margin: 0;
+}
+.h3-line{
+  width: 2rem;
+  height: 1px;
+  background-color: #fff;
+  margin: 11px 0;
+}
+.menu-bottom{
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: $accent;
+  width: 150px;
+  height: 70px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  clip-path: polygon(100% 0, 100% 100%, 50% 79%, 0 100%, 0% 0%);
+  cursor: pointer;
+  font-size: 20px;
+  &:hover{
+    background: lighten($accent, 5%);
+  }
 }
 
 
